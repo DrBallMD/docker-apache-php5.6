@@ -3,9 +3,8 @@ ENV ENVIRONMENT docker
 RUN usermod -u 1000 www-data && groupmod -g 1000 www-data
 
 RUN apt-get update && \
-    apt-get install -y software-properties-common --no-install-recommends
-    
-RUN add-apt-repository -y ppa:ondrej/php && \
+    apt-get install -y software-properties-common --no-install-recommends \
+    add-apt-repository -y ppa:ondrej/php && \
     apt-get update -y --force-yes && \
     apt-get install -y --force-yes --no-install-recommends \ 
       git \
